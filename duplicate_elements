@@ -1,0 +1,32 @@
+//all duplicate elements in input string
+#include <iostream>
+#include <cstring>
+using namespace std;
+
+int main()
+{
+    string s;                                   //string variable
+    cout<<"Enter a string: ";
+    getline>>s;                                 //gets a string
+    cout<<endl;
+    int c;                                      //counter variable to keep the count of duplicate element in the string
+    for(int i=0;i<s.size();i++)
+    {
+        c = 0;
+        if(s[i]!=-1)
+            {
+                for(int j=i+1;j<s.size();j++)
+                {
+                    if(s[i]==s[j])
+                    {
+                        c++;
+                        s[j]=-1;
+                    }
+
+                }
+                if(c>0)
+                  cout<<"The letter :"<<s[i]<<"is repeating"<<endl;
+            }
+    }
+    return 0;
+}
