@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+
+class complex{
+  int busno;
+  string from;
+  string to;
+  char type;
+  float distance;
+  float fare;
+  
+  public:
+  complex(){
+    type = 'O';
+    fare = 500.0;
+  }
+  
+  void read(void){
+    cout<<"Enter the bus number: ";
+    cin>>busno;
+    cout<<"\nEnter the departure: ";
+    cin>>from;
+    cout<<"\nEnter the destination: ";
+    cin>>to;
+    cout<<"\nEnter the distance(in km): ";
+    cin>>distance;
+    cout<<"\nEnter the class: ";
+    cin>>type;
+  }
+  void calc_fare(void){
+    if(type=='O'||type=='o')
+      fare=distance*15;
+    else if(type=='E'||type=='e')
+      fare=distance*20;
+    else if(type=='L'||type=='l')
+      fare=distance*24;
+  }
+ 
+  void output(void){
+    cout<<"\n**************************************************\n";
+    cout<<"The bus no. is : "<<busno<<endl;
+    cout<<"The origin is : "<<from<<endl;
+    cout<<"The destination is : "<<to<<endl;
+    cout<<"The class is : "<<type<<endl;
+    cout<<"The distance is : "<<distance<<endl;
+    cout<<"The total fare is : "<<fare<<endl;
+  }
+ 
+}; 
+int main(){
+    complex o1;
+    o1.read();
+    o1.calc_fare();
+    o1.output();
+    return 0;
+}
+
