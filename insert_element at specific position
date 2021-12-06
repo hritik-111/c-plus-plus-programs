@@ -1,0 +1,31 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+void printarray(int *arr,int n){
+for (int i=0; i<n;i++)
+    printf("%d ", arr[i]);
+}
+
+int main()
+{
+    int arr[100] = {1,2,3,4};
+    int n = 4;
+    int position , value;
+     printarray(arr, n);
+    printf("\nEnter the value to insert : ");
+    scanf("%d",&value);
+    printf("Enter the position(index no.) : ");
+    scanf("%d", &position);
+   int temp;
+    n++;
+    for(int i = n; i>position;i--){
+        arr[i]=arr[i-1];
+    }
+    arr[position]=value;
+
+    printf("Array after insertion: \n");
+    printarray(arr, n);
+    return 0;
+}
+
