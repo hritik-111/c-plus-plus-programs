@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int main(){
+    int choice;
+    cout<<"Enter the month number: ";
+    cin>>choice;
+    cout<<endl;
+    switch(choice){
+      case 1: cout<<"JANUARY: 31";
+              break;
+      case 2: cout<<"FEBRUARY: 28/29";
+              break;
+      case 3: cout<<"MARCH: 31";
+              break;
+      case 4: cout<<"APRIL: 30";
+              break;
+      case 5: cout<<"MAY: 31";
+              break;
+      case 6: cout<<"JUNE: 30";
+              break;
+      case 7: cout<<"JULY: 31";
+              break;
+      case 8: cout<<"AUGUST: 31";
+              break;
+      case 9: cout<<"SEPTEMBER: 30";
+              break;
+      case 10: cout<<"OCTOBER: 31";
+              break;
+      case 11: cout<<"NOVEMBER: 30";
+              break;
+      case 12: cout<<"DECEMBER: 31";
+              break;
+       default: cout<<"Wrong Input";
+              break;
+    }
+    return 0;
+}
+
+
