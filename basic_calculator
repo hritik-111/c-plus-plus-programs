@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+  char op;
+  double num1, num2;
+    cout<<"CALCULATE: ";
+    cin>>num1>>op>>num2;
+    cout<<endl<<"The result is: ";
+    switch(op){
+      case '+': cout<<num1+num2;
+                break;
+      case '-': cout<<num1-num2;
+                break;
+      case '*': cout<<num1*num2;
+                break;
+      case '/': cout<<num1/num2;
+                break;
+      default: cout<<"This is a basic calculator, please try entering only two numbers and a basic operator(+,-,*,/).";
+                break;
+    }
+    
+    
+
+    return 0;
+}
+
