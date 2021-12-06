@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+int reverse(int n){
+  if(n==0)
+      return 0;
+  return reverse(n/10)+n%10;
+  
+}
+int main()
+{
+    cout<<"Hello World";
+    int digit;
+    cout<<"\nEnter the digit: ";
+    cin>>digit;
+    
+    int sum = reverse(digit);
+    
+    cout<<"Sum of digits of the number is: "<<sum;
+
+    return 0;
+}
+
