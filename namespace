@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+namespace hritik{
+  int num=10;
+  int func(){
+    cout<<"We are in Hritik namespace\t";
+    return num;
+  }
+};
+
+namespace pal{
+  int num=20;
+  int  func(){
+  cout<<"We are in Pal namespace\t";
+  return num;
+  }
+};
+
+int main()
+{
+    cout<<"Hello World\n";
+    cout<<hritik::func() <<"\n";
+    cout<<hritik::num<<"\n";
+    cout<<pal::func() <<"\n";
+    cout<<pal::num;
+
+    
+    return 0;
+}
