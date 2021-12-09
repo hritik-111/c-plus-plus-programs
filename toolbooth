@@ -1,0 +1,52 @@
+/*7.	Create a class tollbooth.The two data items are of 
+data type unsigned int to hold the total no. of cars, 
+and a type double to hold the total number of money collected. 
+A member function initialize to both of these to zero. 
+A member function called paying_car() increments the car total and add 50 to the cash total.
+Another member function called nopayCar(),  increments the car total but add nothing to the cash total. 
+Finally a member called display() displaysthe two total. Make this program as menu driven. */
+#include <iostream>
+
+using namespace std;
+
+class toolbooth {
+ unsigned data1;
+  double money;
+  public:
+  toolbooth(){
+     data1=0;
+     money=0;
+  }
+  void paying_car(){
+    data1++;
+    money+=50;
+  }
+  void nopayCar(){
+    data1++;
+  }
+  void display(){
+    cout<<"\nTotal number of cars: "<<data1;
+    cout<<"\nTotal amount : "<<money;
+  }
+};
+
+int main()
+{
+    toolbooth obj;
+    int choice;
+    do{
+      cout<<"\n1.Paying \n2.No Pay\n0. Display\nEnter your choice: ";
+      cin>>choice;
+      switch(choice){
+        case 1: obj.paying_car();
+                break;
+        case 2: obj.nopayCar();
+                break;
+        case 0: obj.display();
+                break;
+      }
+      
+    }while(choice!=0);
+
+    return 0;
+}
