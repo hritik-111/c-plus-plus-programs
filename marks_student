@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+class marks{
+  int sub1,sub2,sub3;
+  string name;
+  int rollno;
+  public: 
+  void input(){
+    cout<<"Enter the name: ";
+    cin>>name;
+    cout<<"Enter the roll no: ";
+    cin>>rollno;
+    cout<<"Enter the marks: ";
+    cin>>sub1>>sub2>>sub3;
+ }
+  void display(){
+    cout<<"The details entered are:\n";
+    cout<<"NAME: "<<name<<endl;
+    cout<<"Roll no: "<<rollno<<endl;
+    cout<<"MARKS 1: "<<sub1<<"\tMARKS 2: "<<sub2<<"\tMARKS 3: "<<sub3<<endl;
+  }
+  
+};
+
+int main()
+{
+    marks obj;
+    obj.input();
+    obj.display();
+
+    return 0;
+} 
