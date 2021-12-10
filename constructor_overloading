@@ -1,0 +1,34 @@
+/*12.	Create a class named Volume and its constructors with different number of arguments. 
+Volume(float side)- Volume of cube 
+Volume(float r, float h) )- Volume of cylinder 
+Volume(float len, float br, float hgt) - Volume of cube.
+Write a program to demonstrate the constructor overloading by using 
+all three constructors of Volume class as well as calculate the volume.*/
+#include <iostream>
+using namespace std;
+
+class volume{
+  
+  public:
+  volume(float side){
+    cout<<"\nVolume of cube is: "<<side*side*side;
+  }
+  volume (float r, float h){
+    cout<<"\nVolume of cylinder is: "<<3.14*r*r*h;
+  }
+  volume(float len, float br, float hgt){
+    cout<<"\nVolume of cuboid is: "<<len*br*hgt;
+  }
+};
+
+int main()
+{
+    cout<<"Hello World";
+    volume obj1(3);
+    volume obj2(3,5);
+    volume obj3(3,5,7);
+   
+    
+
+    return 0;
+}
