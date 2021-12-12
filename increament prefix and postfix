@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+class marks{
+  int m;
+  public:
+  marks (){
+    m=0;
+  }
+  marks(int m){
+  this->m=m;
+  }
+  
+  void show(){
+    cout<<"\nYour mark is : "<<m;
+  }
+  marks operator ++(int){
+    marks duplicate(*this);
+    m+=1;
+    return duplicate;
+  }
+  friend marks operator ++ (marks&);
+  
+};
+
+marks operator ++ (marks &n){
+  
+  n.m+=1;
+  return n;
+}
+
+int main(){
+  marks num(25);
+  num.show();
+  (num++).show();
+  num.show();
+  (++num).show();
+  num.show();
+}
