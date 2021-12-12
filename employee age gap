@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+class employee
+{
+	private:
+		string name;
+		int age;
+		string empcode;
+		public:
+			
+			 employee (string n,int a,string ecode)
+			{
+				name=n;
+			  age=a;
+				empcode=ecode;
+			}
+			int operator -(employee e)
+			{
+				return abs(age-e.age);
+			}
+};
+			int main()
+			{
+				employee e1("Nitin",25,"E001");
+				employee e2("Amit",30,"E002");
+				int age_gap=e1-e2;
+				cout<<"\n AGE GAPS IS :"<<age_gap;
+				return 0;
+			}
